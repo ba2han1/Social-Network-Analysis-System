@@ -273,7 +273,7 @@ int main() {
 
     dosyaya_yaz();
 
-    printf("\nDFS ile 2 derinliğe kadar arkadasları listele:\n");
+    printf("\nDFS ile 2 derinlige kadar arkadasları listele:\n");
     int baslangic_id;
     printf("Baslangic kullanici ID: ");
     scanf("%d", &baslangic_id);
