@@ -165,7 +165,7 @@ void dfs(Kullanici* kullanici, int derinlik, int ziyaret_edilen[], int mevcut) {
     }
 }
 
-// ---------------- Ortak Arkadaþ Analizi ----------------
+// ---------------- Ortak ArkadaÅŸ Analizi ----------------
 
 void ortak_arkadas(Kullanici* k1, Kullanici* k2) {
     printf("\nOrtak Arkadaslar: ");
@@ -183,7 +183,7 @@ void ortak_arkadas(Kullanici* k1, Kullanici* k2) {
     printf("\n");
 }
 
-// ---------------- Etki Alaný Hesaplama ----------------
+// ---------------- Etki AlanÄ± Hesaplama ----------------
 
 void etki_alani(Kullanici* kullanici) {
     int ziyaret_edilen[MAX_KULLANICI] = {0};
@@ -215,7 +215,7 @@ void topluluk_tespiti(Kullanici* kullanici, int ziyaret_edilen[]) {
     }
 }
 
-// ---------------- Dosya Yazýmý ----------------
+// ---------------- Dosya YazÄ±mÄ± ----------------
 
 void dosyaya_yaz() {
     FILE* fp = fopen("veriseti.txt", "w");
@@ -273,7 +273,7 @@ int main() {
 
     dosyaya_yaz();
 
-    printf("\nDFS ile 2 derinliðe kadar arkadaþlarý listele:\n");
+    printf("\nDFS ile 2 derinliÄŸe kadar arkadaslarÄ± listele:\n");
     int baslangic_id;
     printf("Baslangic kullanici ID: ");
     scanf("%d", &baslangic_id);
@@ -283,7 +283,7 @@ int main() {
         dfs(baslangic, 2, ziyaret_edilen, 0);
     }
 
-    // Ortak arkadaþ analizi
+    // Ortak arkadaÅŸ analizi
     int kullanici1, kullanici2;
     printf("\nOrtak arkadas analizi icin iki kullanici ID girin (ID1 ID2): ");
     scanf("%d %d", &kullanici1, &kullanici2);
@@ -291,7 +291,7 @@ int main() {
     Kullanici* k2 = kullanici_bul(kullanici2);
     if (k1 && k2) ortak_arkadas(k1, k2);
 
-    // Etki alaný hesaplama
+    // Etki alanÄ± hesaplama
     printf("\nEtki alani hesaplamak icin bir kullanici ID girin: ");
     scanf("%d", &kullanici1);
     Kullanici* k3 = kullanici_bul(kullanici1);
@@ -305,7 +305,7 @@ int main() {
         }
     }
 
-    // --- veriseti.txt dosyasýný aç ve içeriðini göster ---
+    // --- veriseti.txt dosyasÄ±nÄ± aÃ§ ve iÃ§eriÄŸini gÃ¶ster ---
     printf("\n\n Olusturulan veriseti.txt dosyasinin icerigi:\n\n");
 
     FILE* fp = fopen("veriseti.txt", "r");
